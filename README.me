@@ -1,0 +1,108 @@
+# 🧩 Task Tracker App
+
+A full-stack task tracker application built with **React (Vite)**, **ExpressJS**, and **MongoDB**, allowing users to:
+
+- ✅ Sign up / Login with JWT authentication
+- ✅ Create and manage up to 4 projects per user
+- ✅ Add, update, and delete tasks under each project
+- ✅ Track task status (Pending, In Progress, Completed)
+
+---
+
+## 📁 Project Structure
+
+task-tracker/
+├── backend/                # Express + MongoDB API
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── server.js
+│   └── .env
+└── task-tracker-frontend/  # React + Vite client
+    ├── src/
+    │   ├── pages/
+    │   ├── components/
+    │   ├── services/
+    └── main.jsx, App.jsx
+
+---
+
+## 🚀 Features
+
+- Authentication with JWT tokens
+- Passwords hashed using bcrypt
+- Protected routes with token validation
+- CRUD operations for projects and tasks
+- Clean UI with basic inline CSS styling
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend**: React (Vite), Axios, React Router
+- **Backend**: ExpressJS, MongoDB, Mongoose, JWT, bcrypt
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the repository
+
+git clone https://github.com/shreyagitte45/task-tracker.git
+cd task-tracker
+
+### 2️⃣ Setup and Run Backend
+
+cd backend
+npm install
+
+Create a `.env` file in `backend/` with:
+
+PORT=5000  
+MONGO_URI=mongodb://localhost:27017/tasktracker  
+JWT_SECRET=feda5f8f7bcd67a91a74c4a86a72cee981f103d33b1cb3877e599f3a4324184fae266a8c008a14dc8dedcc86ac695d215d1cedea7cd9ee85f42ac70c9ecd6d3e26bfe25476cfb184da476e1f0782456cd87d1638cda5204752c6bfbf20234da6b8fec2ec76e8f602b9190b5189a20185b33a65b8118a9fb312ae263bd7da377fb03226c0c9d4053f22721cb56c6fb9bfdd7e3ca0e8ff703c5ad1e6a966180b125ac505eb6cfa3f466ecf00ce9f8a2fbbc2954547f5017aac1a55814b3a4b3ef921e827315657fca2637f9006c7b470e7ad2b9a52c0f155ae25eff4f916b576804c1582f0c5285ae87eae4164ab57dd5793dcfbb8159fef86bd80df911c79b98b
+
+Then run:
+
+npm run dev  
+# or  
+npx nodemon server.js
+
+Server runs at: http://localhost:5000
+
+---
+
+### 3️⃣ Setup and Run Frontend
+
+cd ../task-tracker-frontend  
+npm install  
+npm run dev
+
+Frontend runs at: http://localhost:5173
+
+---
+
+## 🔐 API Overview
+
+| Method | Route                | Description           |
+|--------|----------------------|-----------------------|
+| POST   | /api/auth/signup     | Register new user     |
+| POST   | /api/auth/login      | Authenticate user     |
+| GET    | /api/projects        | Get all user projects |
+| POST   | /api/projects        | Create a new project  |
+| GET    | /api/tasks/:projectId| Get tasks by project  |
+| POST   | /api/tasks           | Create new task       |
+| PUT    | /api/tasks/:taskId   | Update task status    |
+| DELETE | /api/tasks/:taskId   | Delete task           |
+
+Use **Bearer token** in `Authorization` header for all protected routes.
+
+
+---
+
+## 🙌 Author
+
+**Shreya Gitte**  
+Developer Trainee Task Submission  
+GitHub: https://github.com/shreyagitte45
