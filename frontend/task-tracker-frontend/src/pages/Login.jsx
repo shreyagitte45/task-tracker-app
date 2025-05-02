@@ -39,7 +39,7 @@ export default function Login() {
           width: '300px'
         }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>🔐 Login</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Login</h2>
 
         <input
           name="email"

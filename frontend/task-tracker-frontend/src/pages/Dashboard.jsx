@@ -66,11 +66,11 @@ export default function Dashboard() {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <strong style={{ fontSize: '1.2rem' }}>📌 Task Tracker</strong>
+        <strong style={{ fontSize: '1.2rem' }}>Task Tracker</strong>
         <div>
-          <span style={{ marginRight: '1rem' }}>👋 {userEmail}</span>
+          <span style={{ marginRight: '1rem' }}>{userEmail}</span>
           <button onClick={handleLogout} style={{ padding: '0.4rem 0.8rem', cursor: 'pointer' }}>
-            🔓 Logout
+         Logout
           </button>
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function Dashboard() {
               <strong>{project.title}</strong>
               <div style={{ marginTop: '0.5rem' }}>
                 <Link to={`/projects/${project._id}`}>
-                  <button style={{ padding: '0.4rem 0.8rem' }}>📋 View Tasks</button>
+                  <button style={{ padding: '0.4rem 0.8rem' }}>View Tasks</button>
                 </Link>
               </div>
             </li>
